@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dateBrewed: 2017-04-27
+  oG: 1.5
+  fG: 1.5
+  oGTemp: 1.5
+  fGTemp: 1.5
+  sugarBottle: 1.5
+  targOG: 1.5
+  targFG: 1.5
+  estCarb: 1.5
+  dateBottled: 2017-04-27
+  targFermTime: 2017-04-27 21:23:35
+  sparTime: 2017-04-27 21:23:35
+  boilTime: 2017-04-27 21:23:35
+  mashTime: 2017-04-27 21:23:35
+
+two:
+  name: MyString
+  dateBrewed: 2017-04-27
+  oG: 1.5
+  fG: 1.5
+  oGTemp: 1.5
+  fGTemp: 1.5
+  sugarBottle: 1.5
+  targOG: 1.5
+  targFG: 1.5
+  estCarb: 1.5
+  dateBottled: 2017-04-27
+  targFermTime: 2017-04-27 21:23:35
+  sparTime: 2017-04-27 21:23:35
+  boilTime: 2017-04-27 21:23:35
+  mashTime: 2017-04-27 21:23:35

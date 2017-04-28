@@ -1,0 +1,92 @@
+<%= form_for(recipe) do |f| %>
+  <% if recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dateBrewed %>
+    <%= f.date_select :dateBrewed %>
+  </div>
+
+  <div class="field">
+    <%= f.label :oG %>
+    <%= f.text_field :oG %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fG %>
+    <%= f.text_field :fG %>
+  </div>
+
+  <div class="field">
+    <%= f.label :oGTemp %>
+    <%= f.text_field :oGTemp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fGTemp %>
+    <%= f.text_field :fGTemp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sugarBottle %>
+    <%= f.text_field :sugarBottle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :targOG %>
+    <%= f.text_field :targOG %>
+  </div>
+
+  <div class="field">
+    <%= f.label :targFG %>
+    <%= f.text_field :targFG %>
+  </div>
+
+  <div class="field">
+    <%= f.label :estCarb %>
+    <%= f.text_field :estCarb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dateBottled %>
+    <%= f.date_select :dateBottled %>
+  </div>
+
+  <div class="field">
+    <%= f.label :targFermTime %>
+    <%= f.time_select :targFermTime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sparTime %>
+    <%= f.time_select :sparTime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :boilTime %>
+    <%= f.time_select :boilTime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mashTime %>
+    <%= f.time_select :mashTime %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <strong>Datebrewed:</strong>
+  <%= @recipe.dateBrewed %>
+</p>
+
+<p>
+  <strong>Og:</strong>
+  <%= @recipe.oG %>
+</p>
+
+<p>
+  <strong>Fg:</strong>
+  <%= @recipe.fG %>
+</p>
+
+<p>
+  <strong>Ogtemp:</strong>
+  <%= @recipe.oGTemp %>
+</p>
+
+<p>
+  <strong>Fgtemp:</strong>
+  <%= @recipe.fGTemp %>
+</p>
+
+<p>
+  <strong>Sugarbottle:</strong>
+  <%= @recipe.sugarBottle %>
+</p>
+
+<p>
+  <strong>Targog:</strong>
+  <%= @recipe.targOG %>
+</p>
+
+<p>
+  <strong>Targfg:</strong>
+  <%= @recipe.targFG %>
+</p>
+
+<p>
+  <strong>Estcarb:</strong>
+  <%= @recipe.estCarb %>
+</p>
+
+<p>
+  <strong>Datebottled:</strong>
+  <%= @recipe.dateBottled %>
+</p>
+
+<p>
+  <strong>Targfermtime:</strong>
+  <%= @recipe.targFermTime %>
+</p>
+
+<p>
+  <strong>Spartime:</strong>
+  <%= @recipe.sparTime %>
+</p>
+
+<p>
+  <strong>Boiltime:</strong>
+  <%= @recipe.boilTime %>
+</p>
+
+<p>
+  <strong>Mashtime:</strong>
+  <%= @recipe.mashTime %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
