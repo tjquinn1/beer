@@ -69,6 +69,7 @@ class BeerMainsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beer_main_params
+
       params.require(:beer_main).permit(:name)
     end
 end

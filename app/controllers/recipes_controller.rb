@@ -14,7 +14,8 @@ class RecipesController < ApplicationController
 
   # GET /recipes/new
   def new
-    @recipe = Recipe.new
+    @recipe = Recipe.new(:beer_main_id => params[:id])
+    1.times { @recipe.reci_grains.build }
   end
 
   # GET /recipes/1/edit
@@ -25,6 +26,7 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
+
 
     respond_to do |format|
       if @recipe.save
@@ -69,6 +71,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :dateBrewed, :oG, :fG, :oGTemp, :fGTemp, :sugarBottle, :targOG, :targFG, :estCarb, :dateBottled, :targFermTime, :sparTime, :boilTime, :mashTime)
+      params.require(:recipe).permit(:name, :dateBrewed, :oG, :fG, :oGTemp, :fGTemp, :sugarBottle, :targOG, :targFG, :estCarb, :dateBottled, :targFermTime, :sparTime, :boilTime, :mashTime, :beer_main_id, reci_grains_attributes: [:id, :grain_id, :recipe_id, :amountGrain, :costGrain, :_destroy ])
     end
 end

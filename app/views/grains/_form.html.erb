@@ -1,0 +1,34 @@
+<%= form_for(grain) do |f| %>
+  <% if grain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(grain.errors.count, "error") %> prohibited this grain from being saved:</h2>
+
+      <ul>
+      <% grain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :origin %>
+    <%= f.country_select :origin, priority_countries: ["GB", "US", "DE"] %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :manufName %>
+    <%= f.text_field :manufName %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

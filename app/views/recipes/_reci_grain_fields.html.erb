@@ -1,0 +1,19 @@
+<div class="nested-fields">
+	<div class="field">
+		<%= f.label :grain_id, "Grains"%>
+		<br>
+		<%= f.collection_select(:grain_id, Grain.all, :id, :name) %>
+	</div>
+	<div class="field">
+		<%= f.label :amountGrain, "Grain Amount"%>
+		<br>
+		<%= f.text_field :amountGrain %>
+	</div>
+	<div class="field">
+		<%= f.label :costGrain, "Grain Cost"%>
+		<br>
+		<%= f.text_field :costGrain %>
+	</div>
+
+	<%= link_to_remove_association "X", f %>
+</div>

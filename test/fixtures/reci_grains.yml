@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recipe: one
+  grain: one
+  amountGrain: 1.5
+  costGrain: 9.99
+
+two:
+  recipe: two
+  grain: two
+  amountGrain: 1.5
+  costGrain: 9.99

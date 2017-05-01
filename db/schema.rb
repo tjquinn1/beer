@@ -10,12 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170428042924) do
+ActiveRecord::Schema.define(version: 20170430211954) do
 
   create_table "beer_mains", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "grains", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "origin"
+    t.string   "manufName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reci_grains", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "recipe_id"
+    t.integer  "grain_id"
+    t.float    "amountGrain", limit: 24
+    t.decimal  "costGrain",              precision: 15, scale: 2
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.index ["grain_id"], name: "index_reci_grains_on_grain_id", using: :btree
+    t.index ["recipe_id"], name: "index_reci_grains_on_recipe_id", using: :btree
   end
 
   create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -40,5 +59,7 @@ ActiveRecord::Schema.define(version: 20170428042924) do
     t.index ["beer_main_id"], name: "index_recipes_on_beer_main_id", using: :btree
   end
 
+  add_foreign_key "reci_grains", "grains"
+  add_foreign_key "reci_grains", "recipes"
   add_foreign_key "recipes", "beer_mains"
 end

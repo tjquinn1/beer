@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  origin: MyString
+  amountGrain: 1.5
+  manufName: MyString
+  costGrain: 
+
+two:
+  name: MyString
+  origin: MyString
+  amountGrain: 1.5
+  manufName: MyString
+  costGrain: 

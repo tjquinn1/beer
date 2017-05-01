@@ -86,6 +86,17 @@
     <%= f.time_select :mashTime %>
   </div>
 
+		<div id="reciGrains">
+			<%= f.fields_for(:reci_grains) do |reciGrain| %>
+					<%= render 'reci_grain_fields', :f => reciGrain %>
+			<% end %>
+			<div class="links">
+				<%= link_to_add_association 'Add Grain', f, :reci_grains, :render_options => {:wrapper => 'inline' } %>
+			</div>
+		</div>
+
+		<%= f.hidden_field :beer_main_id %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
